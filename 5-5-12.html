@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <style type="text/css" media="screen">
+     #write{
+       border: 1px solid black;
+       width: 285px;
+       height: 25px;
+     }
+     </style>
+     <title>Colours</title>
+   </head>
+   <body>
+     <form>
+         Choose colour: <input type="text" id="text" value=""></input>
+     </form>
+     <div id="write"></div>
+     <script type="text/javascript" charset="utf-8">
+       var colour = document.getElementById('text');
+       console.log("1- " + colour.value);
+       var element = document.getElementById('write');
+       colour.addEventListener('input', function(e) {
+          console.log("2 - " + this.value);
+          element.style.backgroundColor = this.value;
+       });
+     </script>
+   </body>
+</html>
